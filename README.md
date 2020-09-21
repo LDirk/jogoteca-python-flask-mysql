@@ -1,3 +1,3 @@
 # jogoteca-python-flask-mysql
-Projeto ensinando no alura. 
+Projeto ensinado no alura. 
 Criação de uma aplicação web usando python, flask e Mysql
