@@ -2,7 +2,25 @@
 {% block conteudo %}
 
 
-      <form action="{{ url_for('atualizar') }}" method="post">
+      <form action="{{ url_for('atualizar') }}" method="post" enctype="multipart/form-data">
+
+        <figure class = "thumb col-md-4" > 
+          <img class = "img-responsive" src = "{{url_for('imagem', nome_arquivo = capa_jogo)}}">
+          <figcaption>
+
+            <label class = "fileContainer" >
+                Mudar Capa
+                <input type = 'file' name = 'arquivo' accept=".jpg"> 
+            </label>
+
+
+          </figcaption>
+        </figure>
+
+
+
+
+
         <fieldset>
           <input type="hidden" name="id" value="{{ jogo.id }}">  
 
