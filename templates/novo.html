@@ -2,9 +2,23 @@
 {% block conteudo %}
 
 
-      <form action = "{{url_for('criar')}}" method = "post">
-        <fieldset>
+      <form action = "{{url_for('criar')}}" method = "post" enctype="multipart/form-data" >
 
+        <figure class = "thumb col-md-4"> 
+          <img  class = "img-responsive"  src = "{{url_for('imagem', nome_arquivo = 'capa_padrao.jpg')}}">
+          <figcaption>
+
+              <label class = "fileContainer"> 
+
+                Mudar capa
+                <input type = 'file' name = 'arquivo' accept=".jpg"> 
+
+
+              </label>
+          </figcaption>
+        </figure>
+
+        <fieldset>
           <div class="form-group">
             <label for="nome">Nome</label>
             <input type="text" id="nome" name="nome" class="form-control">
